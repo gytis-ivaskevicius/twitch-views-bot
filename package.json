@@ -1,0 +1,30 @@
+{
+  "name": "twitch-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "outPath": "./output.csv",
+  "scripts": {
+    "build": "tsc --skipLibCheck",
+    "lint-fix": "tslint --fix 'src/**/*.{ts,tsx}'",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "start": "concurrently --kill-others \"tsc --skipLibCheck -w\" \"nodemon\"",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "author": "Gytis Ivaskevicius",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.0.0-beta.41",
+    "apollo-cache-inmemory": "^1.6.5",
+    "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
+    "node-fetch": "^2.6.0"
+  }
+}
